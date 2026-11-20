@@ -67,12 +67,12 @@ p { margin: 0; }
 .hero__cena { position: relative; height: 600px; perspective: 1200px; }
 [data-tilt] { transition: transform .5s var(--mv-ease); will-change: transform; }
 .hero__cel { position: absolute; }
-.hero__cel--tras { --mv-cel-largura: 240px; top: 0; left: 0; opacity: .97; }
-.hero__cel--frente { --mv-cel-largura: 250px; top: 60px; right: 0; z-index: 2; }
+.hero__cel--tras { --mv-cel-largura: 230px; top: 70px; right: 0; }
+.hero__cel--demo { --mv-cel-largura: 280px; top: 0; left: 10px; z-index: 2; }
 .selo-flutua { position: absolute; z-index: 3; display: flex; align-items: center; gap: 8px; padding: 8px 14px 8px 8px; border-radius: 999px; background: #fff; box-shadow: var(--mv-sombra-forte); font-size: var(--mv-t-pequeno); font-weight: var(--mv-peso-forte); animation: sobe 5s ease-in-out infinite; }
 .selo-flutua img { width: 28px; height: 28px; }
-.selo-flutua--pages { right: -10px; top: 20px; }
-.selo-flutua--desk { left: -20px; bottom: 70px; animation-delay: -2.5s; }
+.selo-flutua--pages { right: -10px; top: 30px; }
+.selo-flutua--desk { left: -30px; bottom: 40px; animation-delay: -2.5s; }
 @keyframes sobe { 0%,100% { translate: 0 0; } 50% { translate: 0 -10px; } }
 
 /* ---------- Produtos ---------- */
@@ -103,7 +103,7 @@ p { margin: 0; }
 
 /* ---------- Celular com a calculadora (Marudesk) ---------- */
 .prod__cel-2--esq { right: auto; left: 2%; bottom: 40px; }
-.cel-app { --mv-cel-largura: 290px; position: relative; z-index: 2; margin-left: 90px; }
+.cel-app { --mv-cel-largura: 290px; position: relative; z-index: 2; }
 .cel-app > .app { box-sizing: border-box; width: 100%; height: 100%; overflow: hidden; display: flex; flex-direction: column; border-radius: calc(var(--mv-cel-largura) * .125); padding-top: calc(var(--mv-cel-largura) * .12); background: var(--mv-cel-barra); }
 .app__topo { display: flex; align-items: center; justify-content: space-between; padding: 6px 16px 12px; color: #fff; font-weight: var(--mv-peso-titulo); font-size: 16px; }
 .app__topo small { font-size: 11px; font-weight: var(--mv-peso-forte); background: rgba(255,255,255,.22); padding: 3px 8px; border-radius: 999px; }
@@ -120,6 +120,54 @@ p { margin: 0; }
 .app__resultado strong { display: block; font-size: 30px; font-weight: var(--mv-peso-titulo); letter-spacing: -.03em; line-height: 1.1; font-variant-numeric: tabular-nums; color: var(--mv-tinta); }
 .app__resultado span { font-size: 12px; font-weight: var(--mv-peso-forte); color: var(--mv-ok); }
 .cel-dica { position: absolute; bottom: -6px; right: 8%; font-size: var(--mv-t-pequeno); font-weight: var(--mv-peso-forte); color: var(--mv-acento-texto); }
+
+/* ---------- Demonstração animada do Marudesk (hero) ---------- */
+.md-tela { --md-rosa: #E75480; --md-rosa-2: #D92E63; --md-tinta: #1C1220; --md-cinza: #5A5160; position: relative; box-sizing: border-box; width: 100%; height: 100%; overflow: hidden; display: flex; flex-direction: column; border-radius: calc(var(--mv-cel-largura) * .125); padding-top: calc(var(--mv-cel-largura) * .12); background: var(--md-rosa); color: var(--md-tinta); font-family: var(--mv-fonte); font-size: 12.5px; line-height: 1.35; text-align: left; }
+.md-tela header { display: flex; align-items: center; gap: 8px; padding: 2px 12px 10px; color: #fff; font-weight: 800; font-size: 15px; letter-spacing: -.01em; }
+.md-tela header #demo-titulo { flex: 1; }
+.md-hbtn { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: rgba(255,255,255,.2); }
+.md-avatar { width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; background: #fff; color: var(--md-rosa); font-weight: 800; font-size: 12px; }
+.md-app { flex: 1; overflow-y: auto; padding: 12px; scroll-behavior: smooth; background: #F5F3EF; scrollbar-width: none; }
+.md-app::-webkit-scrollbar { display: none; }
+.md-app form { background: #fff; border-radius: 14px; padding: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.05); }
+.md-app label { display: flex; flex-direction: column; gap: 3px; font-size: 11px; font-weight: 700; color: var(--md-cinza); margin-bottom: 8px; }
+.md-app input, .md-app select { min-height: 34px; width: 100%; border: 1px solid #E6D8DE; border-radius: 9px; padding: 0 8px; font: inherit; font-size: 13px; color: var(--md-tinta); background: #fff; box-sizing: border-box; }
+.md-app .md-linha { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.md-app .md-item { flex-direction: row; align-items: center; justify-content: space-between; gap: 8px; color: var(--md-tinta); font-weight: 600; font-size: 12px; }
+.md-app .md-item input { width: 72px; flex: none; text-align: right; }
+.md-app .md-foco { outline: 2px solid var(--md-rosa-2); outline-offset: 1px; }
+.md-sub { margin: 2px 0 6px; font-size: 11px; font-weight: 700; color: var(--md-cinza); }
+.md-acao { width: 100%; min-height: 38px; border: 0; border-radius: 999px; background: var(--md-rosa-2); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.md-acao:disabled { opacity: .45; cursor: not-allowed; }
+.md-acao--q { width: 32px; min-height: 32px; }
+.md-app ul { margin: 12px 0 0; padding: 0; list-style: none; }
+.md-app li { display: flex; flex-direction: column; padding: 8px 0; border-bottom: 1px dashed #EADFE3; }
+.md-app li span { font-size: 11px; color: var(--md-cinza); }
+.md-app li.md-cartao { flex-direction: row; align-items: flex-start; gap: 8px; background: #fff; border: 0; border-radius: 12px; padding: 10px; margin-bottom: 7px; box-shadow: 0 4px 14px rgba(0,0,0,.05); }
+.md-cartao > span { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.md-ico { flex: none; width: 30px; height: 30px; border-radius: 50%; background: #FCE7EF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E75480'%3E%3Cpath d='M20 2H4c-1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-1-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4h16v3z'/%3E%3C/svg%3E") center/16px no-repeat; }
+.md-selo { flex: none; font-style: normal; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 999px; background: #DCFCE7; color: #166534; }
+.md-selo.zerado { background: #FEE2E2; color: #991B1B; }
+.md-falta { color: #C0262D !important; font-weight: 700; }
+.md-barra { position: sticky; bottom: -12px; margin: 10px -12px -12px; border-radius: 0 0 14px 14px; display: grid; grid-template-columns: 1fr 1fr auto; gap: 6px; align-items: center; background: #201A1C; color: #fff; padding: 9px 10px; }
+.md-barra small { display: block; font-size: 9.5px; color: #CBBFC8; }
+.md-barra strong { font-size: 13px; font-weight: 800; }
+.md-barra .md-rosa { color: #FF9CBB; }
+.md-barra button { min-height: 34px; padding: 0 12px; border: 0; border-radius: 999px; background: var(--md-rosa); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.md-caixa { background: #FAF5F7; border-radius: 12px; padding: 8px 10px; margin: 6px 0 10px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.md-lotes { display: flex; align-items: center; gap: 10px; }
+.md-ptotal { margin: 0 0 4px; font-weight: 700; }
+#p-consumo { margin: 0 0 12px; }
+.md-tela nav { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #EEE3E7; background: #fff; }
+.md-tela nav button { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 2px; border: 0; background: #fff; padding: 6px 0 10px; font: inherit; font-size: 10px; font-weight: 700; color: #6B6470; cursor: pointer; }
+.md-tela nav button[aria-pressed="true"] { color: var(--md-rosa); box-shadow: inset 0 3px var(--md-rosa); }
+.md-tela nav .md-tab-destaque svg { width: 40px; height: 40px; padding: 9px; margin-top: -20px; border-radius: 999px; background: var(--md-rosa); color: #fff; border: 4px solid #fff; box-shadow: 0 8px 20px rgba(231,84,128,.4); box-sizing: border-box; }
+.md-tela nav .md-tab-destaque[aria-pressed="true"] { box-shadow: none; }
+.md-dedo { position: absolute; left: -13px; top: -13px; width: 26px; height: 26px; border-radius: 50%; background: rgba(217,46,99,.35); border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.3); pointer-events: none; opacity: 0; transition: transform .5s ease, opacity .3s; z-index: 5; }
+.md-dedo.toca { animation: md-toque .3s; }
+@keyframes md-toque { 50% { scale: .65; } }
+.md-toast { position: absolute; left: 10px; right: 10px; bottom: 58px; background: #12372C; color: #fff; padding: 9px 12px; border-radius: 12px; font-size: 12px; opacity: 0; transform: translateY(10px); transition: .3s; pointer-events: none; z-index: 4; }
+.md-toast.on { opacity: 1; transform: none; }
 
 /* ---------- Dúvidas ---------- */
 .duvidas { padding-top: 0; }
@@ -179,16 +227,17 @@ p { margin: 0; }
   .wrap { width: calc(100% - 32px); }
   .hero__acoes .mv-btn { width: 100%; }
   .hero__cena { height: 470px; }
-  .hero__cel--tras { --mv-cel-largura: 180px; }
-  .hero__cel--frente { --mv-cel-largura: 190px; top: 50px; }
+  .hero__cena { height: 600px; }
+  .hero__cel--tras { --mv-cel-largura: 150px; top: 120px; }
+  .hero__cel--demo { --mv-cel-largura: 255px; left: 0; }
   .selo-flutua--pages { right: 0; top: 0; }
-  .selo-flutua--desk { left: 0; bottom: 40px; }
+  .selo-flutua--desk { left: auto; right: 0; bottom: 30px; }
   .prod { border-radius: 24px; }
   .prod .mv-btn { align-self: stretch; }
   .prod__telas .mv-celular:not(.mv-celular--p) { --mv-cel-largura: 220px; }
   .prod__cel-2 { --mv-cel-largura: 130px !important; right: 0; }
   .prod__cel-2--esq { left: 0; right: auto; bottom: 60px; }
-  .cel-app { --mv-cel-largura: 260px; margin-left: 50px; }
+  .cel-app { --mv-cel-largura: 260px; }
   .app__corpo { gap: 5px; padding: 10px 14px 12px; }
   .app__titulo { font-size: 13px; }
   .app .campo label { font-size: 11px; margin-bottom: 0; }
