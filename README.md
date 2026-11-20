@@ -14,3 +14,7 @@ Site institucional da Maruvas, a marca que reúne o Marudesk e a MaruPages.
     npx wrangler deploy
 
 Ou conecte este repositório em Workers & Pages → Create → Import a repository, com o comando de deploy `npx wrangler deploy`. Cada push na `main` publica sozinho.
+
+## Cache
+
+`public/_headers` deixa o HTML sem cache e o CSS/JS com cache longo. Ao mudar `css/` ou `js/`, troque o `?v=` nos links do `index.html`.
