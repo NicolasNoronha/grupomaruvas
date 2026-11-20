@@ -16,8 +16,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/maruvas.css?v=20261120b">
-  <link rel="stylesheet" href="css/style.css?v=20261120b">
+  <link rel="stylesheet" href="css/maruvas.css?v=20261120c">
+  <link rel="stylesheet" href="css/style.css?v=20261120c">
 </head>
 <body class="mv-base">
   <div class="progresso" aria-hidden="true"><span></span></div>
@@ -30,7 +30,7 @@
       <nav class="menu" id="menu" aria-label="Principal">
         <a href="#solucoes">Soluções</a>
         <a href="#juntos">Como funciona</a>
-        <a href="#simulador">Simulador</a>
+        <a href="#calculadora">Calculadora</a>
         <a href="#duvidas">Dúvidas</a>
         <a href="https://wa.me/554735165171?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maruvas." class="mv-btn mv-btn--cheio mv-btn--p menu__cta" target="_blank" rel="noopener">Fale com a gente</a>
       </nav>
@@ -53,7 +53,7 @@
           <p class="mv-lead" data-surge style="--d:.12s">Uma vitrine para vender mais e um sistema para lucrar de verdade. Ferramentas simples, feitas para quem vive de doce.</p>
           <div class="hero__acoes" data-surge style="--d:.18s">
             <a href="#solucoes" class="mv-btn mv-btn--cheio mag">Conhecer as soluções <span class="seta">→</span></a>
-            <a href="#simulador" class="mv-btn mv-btn--linha mag">Calcular o preço de um bolo</a>
+            <a href="#calculadora" class="mv-btn mv-btn--linha mag">Calcular o preço de um bolo</a>
           </div>
         </div>
 
@@ -112,22 +112,47 @@
             </ul>
             <a href="https://marudesk.com.br" class="mv-btn mv-btn--cheio mag" target="_blank" rel="noopener">Conhecer o Marudesk <span class="seta">↗</span></a>
           </div>
-          <div class="prod__telas">
-            <figure class="mv-celular" style="--mv-cel-barra:#E8557E" data-tilt="6">
+          <div class="prod__telas" id="calculadora">
+            <figure class="mv-celular mv-celular--p prod__cel-2 prod__cel-2--esq" data-tilt="10" style="--mv-cel-barra:#E8557E">
               <img src="img/telas/marudesk-inicio-celular.jpg" alt="Painel inicial do Marudesk no celular" loading="lazy" width="780" height="1688">
             </figure>
+            <figure class="mv-celular cel-app" style="--mv-cel-barra:#E8557E">
+              <form class="app" id="calc" onsubmit="return false" aria-label="Calculadora de preço do Marudesk">
+                <div class="app__topo"><span>Precificação</span><small>Teste aqui</small></div>
+                <div class="app__corpo">
+                  <p class="app__titulo">Quanto cobrar por esse bolo?</p>
+                  <div class="campo">
+                    <label for="c-ing">Ingredientes <output id="o-ing">R$ 45</output></label>
+                    <input type="range" id="c-ing" min="5" max="300" step="5" value="45">
+                  </div>
+                  <div class="campo">
+                    <label for="c-emb">Embalagem <output id="o-emb">R$ 12</output></label>
+                    <input type="range" id="c-emb" min="0" max="80" step="1" value="12">
+                  </div>
+                  <div class="campo">
+                    <label for="c-hor">Horas de trabalho <output id="o-hor">3 h</output></label>
+                    <input type="range" id="c-hor" min="0.5" max="12" step="0.5" value="3">
+                  </div>
+                  <div class="campo">
+                    <label for="c-val">Valor da sua hora <output id="o-val">R$ 20</output></label>
+                    <input type="range" id="c-val" min="5" max="80" step="1" value="20">
+                  </div>
+                  <div class="campo">
+                    <label for="c-mar">Margem de lucro <output id="o-mar">40%</output></label>
+                    <input type="range" id="c-mar" min="0" max="150" step="5" value="40">
+                  </div>
+                  <div class="app__resultado">
+                    <small>Preço sugerido</small>
+                    <strong id="r-preco" aria-live="polite">R$ 0</strong>
+                    <span>Lucro <b id="r-lucro">R$ 0</b></span>
+                  </div>
+                </div>
+              </form>
+            </figure>
+            <p class="cel-dica" aria-hidden="true">Arraste para testar ↑</p>
           </div>
         </article>
 
-        <article class="breve" data-produto="delivre" data-surge>
-          <img src="img/logos/marudelivre-simbolo.svg" alt="" width="56" height="56">
-          <div>
-            <p class="mv-sobre">Em breve</p>
-            <h3 class="mv-h3">Marudelivre</h3>
-            <p>O próximo produto do ecossistema já está no forno. Quer saber primeiro?</p>
-          </div>
-          <a href="https://wa.me/554735165171?text=Ol%C3%A1!%20Quero%20saber%20quando%20o%20Marudelivre%20sair." class="mv-btn mv-btn--linha mv-btn--p" target="_blank" rel="noopener">Me avise</a>
-        </article>
       </div>
     </section>
 
@@ -158,49 +183,6 @@
         <div class="juntos__cta" data-surge>
           <a href="https://wa.me/554735165171?text=Ol%C3%A1!%20Quero%20saber%20sobre%20MaruPages%20e%20Marudesk%20juntos." class="mv-btn mv-btn--cheio mag" target="_blank" rel="noopener">Quero os dois <span class="seta">→</span></a>
         </div>
-      </div>
-    </section>
-
-    <!-- SIMULADOR -->
-    <section class="secao" id="simulador" data-produto="desk">
-      <div class="wrap simulador">
-        <div class="simulador__texto">
-          <p class="mv-sobre" data-surge>Experimente</p>
-          <h2 class="mv-h1" data-surge style="--d:.06s">Quanto cobrar <span class="mv-enfase">por esse bolo?</span></h2>
-          <p class="mv-lead" data-surge style="--d:.1s">Mexa nos valores e veja o preço mudar. É o raciocínio que o Marudesk faz em todas as suas receitas.</p>
-          <p class="mv-apoio" data-surge style="--d:.14s">Simulação simplificada, só para ilustrar.</p>
-        </div>
-
-        <form class="calc mv-cartao mv-cartao--marketing" id="calc" data-surge style="--d:.1s" onsubmit="return false">
-          <div class="campo">
-            <label for="c-ing">Ingredientes <output id="o-ing">R$ 45</output></label>
-            <input type="range" id="c-ing" min="5" max="300" step="5" value="45">
-          </div>
-          <div class="campo">
-            <label for="c-emb">Embalagem e decoração <output id="o-emb">R$ 12</output></label>
-            <input type="range" id="c-emb" min="0" max="80" step="1" value="12">
-          </div>
-          <div class="campo">
-            <label for="c-hor">Horas de trabalho <output id="o-hor">3 h</output></label>
-            <input type="range" id="c-hor" min="0.5" max="12" step="0.5" value="3">
-          </div>
-          <div class="campo">
-            <label for="c-val">Valor da sua hora <output id="o-val">R$ 20</output></label>
-            <input type="range" id="c-val" min="5" max="80" step="1" value="20">
-          </div>
-          <div class="campo">
-            <label for="c-mar">Margem de lucro <output id="o-mar">40%</output></label>
-            <input type="range" id="c-mar" min="0" max="150" step="5" value="40">
-          </div>
-          <div class="resultado">
-            <div>
-              <span class="mv-apoio">Preço sugerido</span>
-              <strong class="resultado__preco" id="r-preco" aria-live="polite">R$ 0</strong>
-              <span class="mv-chip mv-chip--ok">Lucro <b id="r-lucro">R$ 0</b></span>
-            </div>
-            <a href="https://marudesk.com.br" class="mv-btn mv-btn--cheio" target="_blank" rel="noopener">Precificar no Marudesk <span class="seta">↗</span></a>
-          </div>
-        </form>
       </div>
     </section>
 
@@ -253,7 +235,6 @@
         <h4>Soluções</h4>
         <a href="https://landing-pages-exemplos.nicolasnoronhas.workers.dev/" target="_blank" rel="noopener">MaruPages</a>
         <a href="https://marudesk.com.br" target="_blank" rel="noopener">Marudesk</a>
-        <span class="rodape__breve">Marudelivre (em breve)</span>
       </div>
       <div>
         <h4>Contato</h4>
@@ -266,6 +247,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261120b" defer></script>
+  <script src="js/main.js?v=20261120c" defer></script>
 </body>
 </html>

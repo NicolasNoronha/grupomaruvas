@@ -89,11 +89,6 @@ p { margin: 0; }
 .mv-lista li { position: relative; padding-left: 30px; color: var(--mv-tinta-2); font-size: var(--mv-t-corpo); }
 .mv-lista li::before { content: "✓"; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; display: grid; place-items: center; font-size: 11px; font-weight: 900; border-radius: 50%; color: #fff; background: var(--mv-acento-grad); }
 
-.breve { display: flex; align-items: center; gap: 24px; margin-top: 28px; padding: 24px 32px; border-radius: 24px; border: 1.5px dashed var(--mv-rosa-100); background: rgba(255,255,255,.6); }
-.breve > div { flex: 1; }
-.breve .mv-sobre { margin-bottom: 4px; }
-.breve p:last-child { color: var(--mv-tinta-2); font-size: var(--mv-t-corpo); margin-top: 4px; }
-
 /* ---------- Juntos ---------- */
 .juntos { background: var(--mv-fundo); color: var(--mv-texto); border-radius: 48px; margin: 0 clamp(8px, 2vw, 24px); overflow: hidden; }
 .juntos::before { content: ""; position: absolute; width: 700px; height: 700px; top: -320px; right: -200px; border-radius: 50%; background: radial-gradient(circle, rgba(214,91,145,.4), transparent 65%); pointer-events: none; }
@@ -106,19 +101,25 @@ p { margin: 0; }
 .passo p { color: var(--mv-texto-2); font-size: var(--mv-t-corpo); }
 .juntos__cta { text-align: center; margin-top: 40px; }
 
-/* ---------- Simulador ---------- */
-.simulador { display: grid; grid-template-columns: .85fr 1.15fr; gap: 56px; align-items: center; }
-.simulador__texto { display: grid; gap: 16px; }
-.simulador__texto .mv-sobre { margin-bottom: 0; }
-.campo + .campo { margin-top: 18px; }
-.campo label { display: flex; justify-content: space-between; font-weight: var(--mv-peso-forte); font-size: var(--mv-t-pequeno); margin-bottom: 8px; }
-.campo output { font-variant-numeric: tabular-nums; color: var(--mv-acento-texto); }
-input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; border-radius: 99px; background: linear-gradient(90deg, var(--mv-acento) var(--p, 50%), var(--mv-borda) var(--p, 50%)); outline: none; cursor: pointer; }
-input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #fff; border: 3px solid var(--mv-acento); box-shadow: 0 4px 10px rgba(120,30,80,.3); transition: transform .2s; }
-input[type="range"]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 3px solid var(--mv-acento); }
-input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.2); }
-.resultado { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 28px; padding-top: 24px; border-top: 1px dashed var(--mv-borda); }
-.resultado__preco { display: block; font-size: clamp(2.5rem, 2rem + 2vw, 3.5rem); font-weight: var(--mv-peso-titulo); letter-spacing: -.03em; line-height: 1.05; font-variant-numeric: tabular-nums; margin: 4px 0 10px; }
+/* ---------- Celular com a calculadora (Marudesk) ---------- */
+.prod__cel-2--esq { right: auto; left: 2%; bottom: 40px; }
+.cel-app { --mv-cel-largura: 290px; position: relative; z-index: 2; margin-left: 90px; }
+.cel-app > .app { box-sizing: border-box; width: 100%; height: 100%; overflow: hidden; display: flex; flex-direction: column; border-radius: calc(var(--mv-cel-largura) * .125); padding-top: calc(var(--mv-cel-largura) * .12); background: var(--mv-cel-barra); }
+.app__topo { display: flex; align-items: center; justify-content: space-between; padding: 6px 16px 12px; color: #fff; font-weight: var(--mv-peso-titulo); font-size: 16px; }
+.app__topo small { font-size: 11px; font-weight: var(--mv-peso-forte); background: rgba(255,255,255,.22); padding: 3px 8px; border-radius: 999px; }
+.app__corpo { flex: 1; background: #fff; padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 9px; }
+.app__titulo { font-weight: var(--mv-peso-titulo); font-size: 15px; letter-spacing: -.02em; line-height: 1.2; color: var(--mv-tinta); }
+.app .campo label { display: flex; justify-content: space-between; font-weight: var(--mv-peso-forte); font-size: 12px; margin-bottom: 4px; color: var(--mv-tinta-2); }
+.app .campo output { font-variant-numeric: tabular-nums; color: var(--mv-acento-texto); }
+.app input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 99px; background: linear-gradient(90deg, var(--mv-acento) var(--p, 50%), var(--mv-borda) var(--p, 50%)); outline: none; cursor: pointer; touch-action: pan-y; margin: 6px 0; }
+.app input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 3px solid var(--mv-acento); box-shadow: 0 3px 8px rgba(120,30,80,.3); }
+.app input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 3px solid var(--mv-acento); }
+.app input[type="range"]:focus-visible { outline: 2px solid var(--mv-acento); outline-offset: 4px; }
+.app__resultado { margin-top: auto; padding: 12px 14px; border-radius: 14px; background: var(--mv-nevoa); }
+.app__resultado small { display: block; font-size: 11px; font-weight: var(--mv-peso-forte); color: var(--mv-tinta-3); }
+.app__resultado strong { display: block; font-size: 30px; font-weight: var(--mv-peso-titulo); letter-spacing: -.03em; line-height: 1.1; font-variant-numeric: tabular-nums; color: var(--mv-tinta); }
+.app__resultado span { font-size: 12px; font-weight: var(--mv-peso-forte); color: var(--mv-ok); }
+.cel-dica { position: absolute; bottom: -6px; right: 8%; font-size: var(--mv-t-pequeno); font-weight: var(--mv-peso-forte); color: var(--mv-acento-texto); }
 
 /* ---------- Dúvidas ---------- */
 .duvidas { padding-top: 0; }
@@ -156,7 +157,7 @@ input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.2); }
 
 /* ---------- Responsivo ---------- */
 @media (max-width: 1020px) {
-  .hero__grid, .simulador, .duvidas__grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero__grid, .duvidas__grid { grid-template-columns: 1fr; gap: 40px; }
   .hero { padding-top: 120px; }
   .hero__cena { max-width: 520px; width: 100%; margin: 0 auto; }
   .prod { grid-template-columns: 1fr; gap: 40px; }
@@ -171,7 +172,6 @@ input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.2); }
   .menu__cta { margin-top: 16px; }
   .topo.menu-aberto { background: rgba(255,248,244,.98); }
   .fluxo { grid-template-columns: 1fr; }
-  .breve { flex-direction: column; align-items: flex-start; }
   .rodape__grid { grid-template-columns: 1fr 1fr; }
   .rodape__grid > div:first-child { grid-column: 1 / -1; }
 }
@@ -187,12 +187,21 @@ input[type="range"]:active::-webkit-slider-thumb { transform: scale(1.2); }
   .prod .mv-btn { align-self: stretch; }
   .prod__telas .mv-celular:not(.mv-celular--p) { --mv-cel-largura: 220px; }
   .prod__cel-2 { --mv-cel-largura: 130px !important; right: 0; }
+  .prod__cel-2--esq { left: 0; right: auto; bottom: 60px; }
+  .cel-app { --mv-cel-largura: 260px; margin-left: 50px; }
+  .app__corpo { gap: 5px; padding: 10px 14px 12px; }
+  .app__titulo { font-size: 13px; }
+  .app .campo label { font-size: 11px; margin-bottom: 0; }
+  .app input[type="range"] { margin: 5px 0; }
+  .app__resultado { padding: 8px 12px; }
+  .app__resultado strong { font-size: 24px; }
+  .app__topo { font-size: 14px; padding-bottom: 8px; }
+  .cel-dica { right: 0; }
   .prod__telas::before { width: 260px; height: 260px; }
   .faq details p { padding-right: 0; }
   .juntos { border-radius: 28px; }
   .final__caixa { border-radius: 28px; }
   .final__acoes .mv-btn { width: 100%; }
-  .resultado .mv-btn { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
