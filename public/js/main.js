@@ -45,12 +45,6 @@
     requestAnimationFrame(passo);
   }
 
-  /* ---------- Cena do hero em telas pequenas ---------- */
-  const heroCena = $('.hero__cena');
-  const ajustaCena = () => { if (heroCena) heroCena.style.setProperty('--esc', Math.min(1, heroCena.clientWidth / 560).toFixed(3)); };
-  addEventListener('resize', ajustaCena);
-  ajustaCena();
-
   /* ---------- Topo, progresso e menu ativo ---------- */
   const topo = $('#topo');
   const barra = $('.progresso span');
@@ -86,10 +80,10 @@
   /* ---------- Interações de mouse (só desktop) ---------- */
   if (ponteiroFino && !reduz) {
     // Parallax do hero
-    const cena = $('#cena');
+    const cena = $('.hero__cena');
     const hero = $('.hero');
     const camadas = $$('[data-par]');
-    const tilts = $$('[data-tilt]', cena);
+    const tilts = $$('[data-tilt]', hero);
     hero.addEventListener('pointermove', (e) => {
       const x = e.clientX / innerWidth - 0.5;
       const y = e.clientY / innerHeight - 0.5;
@@ -165,11 +159,6 @@
       const preco = custo + lucro;
       animaPreco(preco);
       lucroEl.textContent = fmt(lucro);
-      const total = preco || 1;
-      $('#b-ing').style.flexGrow = v.ing / total;
-      $('#b-emb').style.flexGrow = v.emb / total;
-      $('#b-mao').style.flexGrow = mao / total;
-      $('#b-luc').style.flexGrow = lucro / total;
     }
     ids.forEach((k) => ent[k].addEventListener('input', atualiza));
     atualiza();

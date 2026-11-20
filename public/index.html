@@ -4,34 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Maruvas · Tecnologia para confeiteiras que empreendem</title>
-  <meta name="description" content="A Maruvas cria soluções digitais para confeiteiras e doceiras: Marudesk para precificar, controlar estoque, vendas e financeiro, e MaruPages para ter uma vitrine profissional na internet.">
+  <meta name="description" content="A Maruvas reúne soluções digitais para confeiteiras e doceiras: MaruPages para ter uma vitrine profissional e Marudesk para precificar, controlar estoque, vendas e financeiro.">
   <meta name="theme-color" content="#D65B91">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Maruvas · Tecnologia para confeiteiras que empreendem">
-  <meta property="og:description" content="Soluções para transformar confeitaria em negócio. Conheça o Marudesk e a MaruPages.">
+  <meta property="og:description" content="Soluções para transformar confeitaria em negócio. Conheça a MaruPages e o Marudesk.">
   <meta property="og:locale" content="pt_BR">
-  <link rel="icon" href="img/maruvas.svg" type="image/svg+xml">
+  <link rel="icon" href="img/logos/maruvas-simbolo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/maruvas.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="mv-base">
   <div class="progresso" aria-hidden="true"><span></span></div>
 
   <header class="topo" id="topo">
     <div class="wrap topo__in">
-      <a href="#inicio" class="marca" aria-label="Maruvas, início">
-        <img src="img/maruvas.svg" alt="" width="36" height="36">
-        <span>Maruvas</span>
+      <a href="#inicio" class="topo__logo" aria-label="Maruvas, início">
+        <img src="img/logos/maruvas-logo-claro.svg" alt="Maruvas" width="132" height="32">
       </a>
       <nav class="menu" id="menu" aria-label="Principal">
-        <a href="#produtos">Produtos</a>
-        <a href="#juntos">Juntos</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#juntos">Como funciona</a>
         <a href="#simulador">Simulador</a>
-        <a href="#para-quem">Para quem</a>
         <a href="#duvidas">Dúvidas</a>
-        <a href="https://wa.me/554735165171?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maruvas%20e%20quero%20saber%20mais." class="btn btn--sm btn--cheio menu__cta" target="_blank" rel="noopener">Fale com a gente</a>
+        <a href="https://wa.me/554735165171?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Maruvas." class="mv-btn mv-btn--cheio mv-btn--p menu__cta" target="_blank" rel="noopener">Fale com a gente</a>
       </nav>
       <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
     </div>
@@ -42,222 +41,135 @@
     <section class="hero">
       <div class="hero__fundo" aria-hidden="true">
         <span class="bola bola--1" data-par="18"></span>
-        <span class="bola bola--2" data-par="-26"></span>
-        <span class="bola bola--3" data-par="12"></span>
-        <span class="aro aro--1" data-par="-10"></span>
-        <span class="aro aro--2" data-par="22"></span>
+        <span class="bola bola--2" data-par="-24"></span>
+        <span class="aro" data-par="-10"></span>
       </div>
       <div class="wrap hero__grid">
         <div class="hero__texto">
-          <p class="selo" data-surge><span class="ponto"></span> Feito para quem vive de doce</p>
-          <h1 data-surge style="--d:.08s">Tecnologia para confeiteiras que <em class="destaque">empreendem<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15 C 70 4, 160 3, 297 11"/></svg></em>.</h1>
-          <p class="hero__sub" data-surge style="--d:.16s">Soluções para transformar confeitaria em negócio. Da precificação do bolo à vitrine que recebe pedidos, a Maruvas reúne as ferramentas para você vender mais e lucrar de verdade.</p>
-          <div class="hero__acoes" data-surge style="--d:.24s">
-            <a href="#produtos" class="btn btn--cheio mag">Conhecer as soluções <span class="seta">→</span></a>
-            <a href="#simulador" class="btn btn--linha mag">Calcular o preço de um bolo</a>
+          <p class="mv-sobre" data-surge>Ecossistema para confeitaria</p>
+          <h1 class="mv-display" data-surge style="--d:.06s">Tecnologia para confeiteiras que <span class="mv-enfase">empreendem.</span></h1>
+          <p class="mv-lead" data-surge style="--d:.12s">Uma vitrine para vender mais e um sistema para lucrar de verdade. Ferramentas simples, feitas para quem vive de doce.</p>
+          <div class="hero__acoes" data-surge style="--d:.18s">
+            <a href="#solucoes" class="mv-btn mv-btn--cheio mag">Conhecer as soluções <span class="seta">→</span></a>
+            <a href="#simulador" class="mv-btn mv-btn--linha mag">Calcular o preço de um bolo</a>
           </div>
-          <ul class="hero__chips" data-surge style="--d:.32s">
-            <li>Precificação</li><li>Estoque</li><li>Vendas</li><li>Financeiro</li><li>Vitrine digital</li>
-          </ul>
         </div>
 
-        <div class="hero__cena" aria-hidden="true" data-surge style="--d:.2s">
-          <div class="cena" id="cena">
-            <!-- Cartão Marudesk -->
-            <div class="cartao cartao--painel" data-tilt="8">
-              <div class="cartao__topo">
-                <span class="mini-logo mini-logo--desk"></span>
-                <strong>Marudesk</strong>
-                <span class="tag">Novembro</span>
-              </div>
-              <div class="kpis">
-                <div><small>Vendas</small><b data-conta="18640" data-prefixo="R$ ">R$ 0</b></div>
-                <div><small>Lucro</small><b class="ok" data-conta="7210" data-prefixo="R$ ">R$ 0</b></div>
-              </div>
-              <div class="barras">
-                <span style="--h:38%"></span><span style="--h:52%"></span><span style="--h:44%"></span><span style="--h:66%"></span><span style="--h:58%"></span><span style="--h:80%"></span><span style="--h:92%"></span>
-              </div>
-              <div class="linha-item"><span>Bolo de pote · ninho</span><b>margem 58%</b></div>
-              <div class="linha-item"><span>Leite condensado</span><b class="alerta">estoque baixo</b></div>
-            </div>
-            <!-- Celular MaruPages -->
-            <div class="celular" data-tilt="10">
-              <div class="celular__tela">
-                <div class="celular__notch"></div>
-                <div class="vitrine">
-                  <div class="vitrine__capa">
-                    <span class="vitrine__logo">🍰</span>
-                    <b>Doce Lar Confeitaria</b>
-                    <small>Encomendas · Entrega no bairro</small>
-                  </div>
-                  <div class="vitrine__item"><span class="foto f1"></span><div><b>Bolo de morango</b><small>a partir de R$ 120</small></div></div>
-                  <div class="vitrine__item"><span class="foto f2"></span><div><b>Caixa de brigadeiros</b><small>12 unidades</small></div></div>
-                  <div class="vitrine__item"><span class="foto f3"></span><div><b>Torta de limão</b><small>fatia ou inteira</small></div></div>
-                  <div class="vitrine__btn">Pedir pelo WhatsApp</div>
-                </div>
-              </div>
-            </div>
-            <!-- Notificação -->
-            <div class="notif" data-tilt="6">
-              <span class="notif__icone">✓</span>
-              <div><b>Novo pedido</b><small>2 bolos para sábado</small></div>
-            </div>
-          </div>
+        <div class="hero__cena" data-surge style="--d:.14s">
+          <figure class="mv-celular hero__cel hero__cel--tras" data-tilt="8" style="--mv-cel-barra:#E8557E">
+            <img src="img/telas/marudesk-inicio-celular.jpg" alt="Painel inicial do Marudesk no celular, com vendas e estoque" width="780" height="1688">
+          </figure>
+          <figure class="mv-celular hero__cel hero__cel--frente" data-tilt="12" style="--mv-cel-barra:#E8B54C">
+            <img src="img/telas/marupages-doceria-jabuticaba-celular.png" alt="Vitrine MaruPages da Doceria Jabuticaba no celular" width="780" height="1688">
+          </figure>
+          <div class="selo-flutua selo-flutua--pages" aria-hidden="true"><img src="img/logos/marupages-simbolo.svg" alt="" width="28" height="28">Vitrine</div>
+          <div class="selo-flutua selo-flutua--desk" aria-hidden="true"><img src="img/logos/marudesk-simbolo.svg" alt="" width="28" height="28">Gestão</div>
         </div>
       </div>
     </section>
 
-    <!-- FAIXA -->
-    <div class="faixa" aria-hidden="true">
-      <div class="faixa__trilho">
-        <span>Precifique com segurança</span><i>●</i><span>Controle o estoque</span><i>●</i><span>Registre cada venda</span><i>●</i><span>Enxergue o lucro</span><i>●</i><span>Tenha uma vitrine profissional</span><i>●</i><span>Receba pedidos no WhatsApp</span><i>●</i>
-        <span>Precifique com segurança</span><i>●</i><span>Controle o estoque</span><i>●</i><span>Registre cada venda</span><i>●</i><span>Enxergue o lucro</span><i>●</i><span>Tenha uma vitrine profissional</span><i>●</i><span>Receba pedidos no WhatsApp</span><i>●</i>
-      </div>
-    </div>
-
-    <!-- MANIFESTO -->
-    <section class="secao manifesto">
-      <div class="wrap">
-        <p class="rotulo" data-surge>Por que a Maruvas existe</p>
-        <h2 class="manifesto__frase" data-surge style="--d:.08s">Você já domina a cozinha. <span>Agora é hora de a confeitaria virar um negócio que se sustenta.</span></h2>
-        <div class="dores">
-          <article class="dor" data-surge style="--d:.1s">
-            <span class="dor__num">01</span>
-            <h3>“Será que estou cobrando certo?”</h3>
-            <p>Ingrediente sobe, a embalagem muda, o gás acaba. Sem conta feita, o lucro some sem você perceber.</p>
-          </article>
-          <article class="dor" data-surge style="--d:.18s">
-            <span class="dor__num">02</span>
-            <h3>“Faltou leite condensado de novo.”</h3>
-            <p>Estoque na cabeça e pedidos no caderno funcionam até o dia em que não funcionam mais.</p>
-          </article>
-          <article class="dor" data-surge style="--d:.26s">
-            <span class="dor__num">03</span>
-            <h3>“Ninguém acha meus doces na internet.”</h3>
-            <p>Foto solta no status não passa a confiança de uma confeitaria profissional. Cliente quer ver cardápio e pedir fácil.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRODUTOS -->
-    <section class="secao produtos" id="produtos">
+    <!-- SOLUÇÕES -->
+    <section class="secao" id="solucoes">
       <div class="wrap">
         <div class="cabeca">
-          <p class="rotulo" data-surge>Nossas soluções</p>
-          <h2 data-surge style="--d:.06s">Duas ferramentas. <em>Um negócio redondo.</em></h2>
-          <p class="cabeca__sub" data-surge style="--d:.12s">Comece pelo que mais aperta hoje. Quando quiser, una as duas.</p>
+          <p class="mv-sobre" data-surge>Soluções Maruvas</p>
+          <h2 class="mv-h1" data-surge style="--d:.06s">Cada produto resolve uma parte. <span class="mv-enfase">Juntos, o negócio todo.</span></h2>
         </div>
 
-        <div class="prods">
-          <article class="prod prod--desk brilho" data-surge>
-            <div class="prod__topo">
-              <span class="prod__logo prod__logo--desk" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
-              </span>
-              <div>
-                <h3>Marudesk</h3>
-                <p class="prod__tipo">Sistema de gestão</p>
-              </div>
-            </div>
-            <p class="prod__slogan">Organize, precifique e lucre.</p>
-            <p>O painel de controle da sua confeitaria. Saiba quanto custa cada receita, quanto sobra em cada venda e o que precisa comprar antes de faltar.</p>
-            <ul class="lista">
-              <li><b>Precificação</b> por receita, com custo de ingredientes, embalagem e mão de obra</li>
-              <li><b>Estoque</b> de insumos com aviso do que está acabando</li>
-              <li><b>Vendas</b> e encomendas registradas num só lugar</li>
-              <li><b>Financeiro</b> com entradas, saídas e lucro do mês</li>
+        <article class="prod" data-produto="pages" data-surge>
+          <div class="prod__texto">
+            <img class="prod__logo" src="img/logos/marupages-logo-claro.svg" alt="MaruPages" width="182" height="36">
+            <h3 class="mv-h2">Sua confeitaria com uma <span class="mv-enfase">vitrine profissional.</span></h3>
+            <p class="mv-lead">Um site feito sob medida que mostra seus doces e leva o cliente direto para o pedido no WhatsApp.</p>
+            <ul class="mv-lista">
+              <li>Cardápio com fotos, sabores e preços</li>
+              <li>Pedido pelo WhatsApp com um toque</li>
+              <li>Um link para a bio do Instagram e para o Google</li>
             </ul>
-            <a href="https://marudesk.com.br" class="btn btn--cheio prod__btn mag" target="_blank" rel="noopener">Conhecer o Marudesk <span class="seta">↗</span></a>
-          </article>
+            <a href="https://landing-pages-exemplos.nicolasnoronhas.workers.dev/" class="mv-btn mv-btn--cheio mag" target="_blank" rel="noopener">Conhecer a MaruPages <span class="seta">↗</span></a>
+          </div>
+          <div class="prod__telas">
+            <figure class="mv-celular" style="--mv-cel-barra:#E8B54C" data-tilt="6">
+              <img src="img/telas/marupages-doceria-jabuticaba-celular.png" alt="Vitrine de demonstração da Doceria Jabuticaba" loading="lazy" width="780" height="1688">
+            </figure>
+            <figure class="mv-celular mv-celular--p prod__cel-2" data-tilt="10">
+              <img src="img/telas/marupages-atelie-canela-celular.png" alt="Vitrine de demonstração do Ateliê Canela" loading="lazy" width="780" height="1688">
+            </figure>
+          </div>
+        </article>
 
-          <article class="prod prod--pages brilho" data-surge style="--d:.12s">
-            <div class="prod__topo">
-              <span class="prod__logo prod__logo--pages" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M10 18h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-              </span>
-              <div>
-                <h3>MaruPages</h3>
-                <p class="prod__tipo">Vitrines digitais e páginas de vendas</p>
-              </div>
-            </div>
-            <p class="prod__slogan">Sua confeitaria com uma vitrine profissional.</p>
-            <p>Um site bonito e rápido, feito sob medida para o seu negócio, que mostra seus doces e leva o cliente direto para o pedido.</p>
-            <ul class="lista">
-              <li><b>Cardápio</b> com fotos, sabores e preços</li>
-              <li><b>Pedidos pelo WhatsApp</b> com um toque</li>
-              <li><b>Visual profissional</b> que funciona bem no celular</li>
-              <li><b>Link único</b> para a bio do Instagram e para o Google</li>
+        <article class="prod prod--inverso" data-produto="desk" data-surge>
+          <div class="prod__texto">
+            <img class="prod__logo" src="img/logos/marudesk-logo-claro.svg" alt="Marudesk" width="166" height="36">
+            <h3 class="mv-h2">Organize, precifique <span class="mv-enfase">e lucre.</span></h3>
+            <p class="mv-lead">O sistema de gestão da sua confeitaria. Saiba quanto custa cada receita, quanto sobra em cada venda e o que comprar antes de faltar.</p>
+            <ul class="mv-lista">
+              <li>Precificação por receita, com ingredientes e embalagem</li>
+              <li>Estoque de insumos e vendas num só lugar</li>
+              <li>Financeiro com o lucro real do mês</li>
             </ul>
-            <a href="https://landing-pages-exemplos.nicolasnoronhas.workers.dev/" class="btn btn--cheio prod__btn mag" target="_blank" rel="noopener">Conhecer a MaruPages <span class="seta">↗</span></a>
-          </article>
-        </div>
+            <a href="https://marudesk.com.br" class="mv-btn mv-btn--cheio mag" target="_blank" rel="noopener">Conhecer o Marudesk <span class="seta">↗</span></a>
+          </div>
+          <div class="prod__telas">
+            <figure class="mv-celular" style="--mv-cel-barra:#E8557E" data-tilt="6">
+              <img src="img/telas/marudesk-inicio-celular.jpg" alt="Painel inicial do Marudesk no celular" loading="lazy" width="780" height="1688">
+            </figure>
+          </div>
+        </article>
+
+        <article class="breve" data-produto="delivre" data-surge>
+          <img src="img/logos/marudelivre-simbolo.svg" alt="" width="56" height="56">
+          <div>
+            <p class="mv-sobre">Em breve</p>
+            <h3 class="mv-h3">Marudelivre</h3>
+            <p>O próximo produto do ecossistema já está no forno. Quer saber primeiro?</p>
+          </div>
+          <a href="https://wa.me/554735165171?text=Ol%C3%A1!%20Quero%20saber%20quando%20o%20Marudelivre%20sair." class="mv-btn mv-btn--linha mv-btn--p" target="_blank" rel="noopener">Me avise</a>
+        </article>
       </div>
     </section>
 
-    <!-- JUNTOS -->
-    <section class="secao juntos" id="juntos">
+    <!-- COMO FUNCIONA JUNTOS -->
+    <section class="secao juntos" id="juntos" data-tema="escuro">
       <div class="wrap">
-        <div class="cabeca cabeca--claro">
-          <p class="rotulo" data-surge>Melhor juntos</p>
-          <h2 data-surge style="--d:.06s">Do primeiro clique <em>ao lucro no fim do mês.</em></h2>
-          <p class="cabeca__sub" data-surge style="--d:.12s">A MaruPages traz o cliente. O Marudesk garante que cada pedido dê lucro. Usando os dois, você cuida da jornada inteira com a mesma parceira.</p>
+        <div class="cabeca">
+          <p class="mv-sobre" data-surge>Melhor juntos</p>
+          <h2 class="mv-h1" data-surge style="--d:.06s">Do primeiro clique <span class="mv-enfase">ao lucro do mês.</span></h2>
         </div>
-
         <ol class="fluxo">
-          <li class="passo" data-surge>
-            <span class="passo__tag passo__tag--pages">MaruPages</span>
-            <span class="passo__icone">✨</span>
-            <h3>O cliente encontra</h3>
-            <p>Sua vitrine aparece no Instagram, no Google e no boca a boca, com cara de confeitaria profissional.</p>
+          <li class="passo" data-produto="pages" data-surge>
+            <img src="img/logos/marupages-simbolo.svg" alt="" width="44" height="44">
+            <h3 class="mv-h4">O cliente encontra</h3>
+            <p>Sua vitrine MaruPages aparece no Instagram e no Google.</p>
           </li>
-          <li class="passo" data-surge style="--d:.1s">
-            <span class="passo__tag passo__tag--pages">MaruPages</span>
-            <span class="passo__icone">💬</span>
-            <h3>O pedido chega</h3>
+          <li class="passo" data-produto="pages" data-surge style="--d:.08s">
+            <img src="img/logos/marupages-simbolo.svg" alt="" width="44" height="44">
+            <h3 class="mv-h4">O pedido chega</h3>
             <p>Ele escolhe no cardápio e chama no WhatsApp já sabendo o que quer.</p>
           </li>
-          <li class="passo" data-surge style="--d:.2s">
-            <span class="passo__tag passo__tag--desk">Marudesk</span>
-            <span class="passo__icone">🧾</span>
-            <h3>A venda é registrada</h3>
-            <p>A encomenda entra no sistema, com o preço calculado a partir do custo real.</p>
-          </li>
-          <li class="passo" data-surge style="--d:.3s">
-            <span class="passo__tag passo__tag--desk">Marudesk</span>
-            <span class="passo__icone">📈</span>
-            <h3>O lucro aparece</h3>
-            <p>Estoque e financeiro ficam em dia, e você sabe quanto ganhou de verdade.</p>
+          <li class="passo" data-produto="desk" data-surge style="--d:.16s">
+            <img src="img/logos/marudesk-simbolo.svg" alt="" width="44" height="44">
+            <h3 class="mv-h4">Você lucra</h3>
+            <p>No Marudesk a venda tem preço certo, e estoque e caixa ficam em dia.</p>
           </li>
         </ol>
-
-        <div class="combo" data-surge>
-          <div class="combo__selos" aria-hidden="true">
-            <span class="prod__logo prod__logo--pages"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M10 18h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
-            <span class="combo__mais">+</span>
-            <span class="prod__logo prod__logo--desk"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
-          </div>
-          <div class="combo__texto">
-            <h3>Quer as duas soluções?</h3>
-            <p>Conte para a gente como está a sua confeitaria hoje e montamos a combinação certa para o seu momento.</p>
-          </div>
-          <a href="https://wa.me/554735165171?text=Ol%C3%A1!%20Quero%20saber%20sobre%20Marudesk%20e%20MaruPages%20juntos." class="btn btn--branco mag" target="_blank" rel="noopener">Quero os dois <span class="seta">→</span></a>
+        <div class="juntos__cta" data-surge>
+          <a href="https://wa.me/554735165171?text=Ol%C3%A1!%20Quero%20saber%20sobre%20MaruPages%20e%20Marudesk%20juntos." class="mv-btn mv-btn--cheio mag" target="_blank" rel="noopener">Quero os dois <span class="seta">→</span></a>
         </div>
       </div>
     </section>
 
     <!-- SIMULADOR -->
-    <section class="secao simulador" id="simulador">
-      <div class="wrap simulador__grid">
+    <section class="secao" id="simulador" data-produto="desk">
+      <div class="wrap simulador">
         <div class="simulador__texto">
-          <p class="rotulo" data-surge>Experimente</p>
-          <h2 data-surge style="--d:.06s">Quanto cobrar <em>por esse bolo?</em></h2>
-          <p data-surge style="--d:.12s">Mexa nos valores e veja como custo, tempo e margem mudam o preço final. É uma amostra do raciocínio que o Marudesk faz por você em todas as receitas, todos os dias.</p>
-          <p class="nota" data-surge style="--d:.18s">Simulação simplificada, só para ilustrar. No Marudesk o cálculo considera cada ingrediente da receita.</p>
-          <a href="https://marudesk.com.br" class="btn btn--linha mag" target="_blank" rel="noopener" data-surge style="--d:.22s">Precificar de verdade no Marudesk <span class="seta">↗</span></a>
+          <p class="mv-sobre" data-surge>Experimente</p>
+          <h2 class="mv-h1" data-surge style="--d:.06s">Quanto cobrar <span class="mv-enfase">por esse bolo?</span></h2>
+          <p class="mv-lead" data-surge style="--d:.1s">Mexa nos valores e veja o preço mudar. É o raciocínio que o Marudesk faz em todas as suas receitas.</p>
+          <p class="mv-apoio" data-surge style="--d:.14s">Simulação simplificada, só para ilustrar.</p>
         </div>
 
-        <form class="calc brilho" id="calc" data-surge style="--d:.1s" onsubmit="return false">
+        <form class="calc mv-cartao mv-cartao--marketing" id="calc" data-surge style="--d:.1s" onsubmit="return false">
           <div class="campo">
             <label for="c-ing">Ingredientes <output id="o-ing">R$ 45</output></label>
             <input type="range" id="c-ing" min="5" max="300" step="5" value="45">
@@ -278,96 +190,37 @@
             <label for="c-mar">Margem de lucro <output id="o-mar">40%</output></label>
             <input type="range" id="c-mar" min="0" max="150" step="5" value="40">
           </div>
-
           <div class="resultado">
-            <div class="resultado__pilha" aria-hidden="true">
-              <span class="camada camada--ing" id="b-ing"></span>
-              <span class="camada camada--emb" id="b-emb"></span>
-              <span class="camada camada--mao" id="b-mao"></span>
-              <span class="camada camada--luc" id="b-luc"></span>
+            <div>
+              <span class="mv-apoio">Preço sugerido</span>
+              <strong class="resultado__preco" id="r-preco" aria-live="polite">R$ 0</strong>
+              <span class="mv-chip mv-chip--ok">Lucro <b id="r-lucro">R$ 0</b></span>
             </div>
-            <div class="resultado__num">
-              <small>Preço sugerido</small>
-              <strong id="r-preco" aria-live="polite">R$ 0</strong>
-              <span class="resultado__luc">Lucro: <b id="r-lucro">R$ 0</b></span>
-            </div>
+            <a href="https://marudesk.com.br" class="mv-btn mv-btn--cheio" target="_blank" rel="noopener">Precificar no Marudesk <span class="seta">↗</span></a>
           </div>
-          <ul class="legenda" aria-hidden="true">
-            <li><i class="camada--ing"></i>Ingredientes</li>
-            <li><i class="camada--emb"></i>Embalagem</li>
-            <li><i class="camada--mao"></i>Seu trabalho</li>
-            <li><i class="camada--luc"></i>Lucro</li>
-          </ul>
         </form>
-      </div>
-    </section>
-
-    <!-- PARA QUEM -->
-    <section class="secao paraquem" id="para-quem">
-      <div class="wrap">
-        <div class="cabeca">
-          <p class="rotulo" data-surge>Para quem é</p>
-          <h2 data-surge style="--d:.06s">Do primeiro pedido <em>à confeitaria com equipe.</em></h2>
-        </div>
-        <div class="perfis">
-          <article class="perfil" data-surge>
-            <span class="perfil__emoji" aria-hidden="true">🧁</span>
-            <h3>Começando em casa</h3>
-            <p>Você vende para amigos e vizinhos e quer parar de chutar o preço. Comece pelo Marudesk e já saiba quanto ganha em cada encomenda.</p>
-          </article>
-          <article class="perfil" data-surge style="--d:.1s">
-            <span class="perfil__emoji" aria-hidden="true">🎂</span>
-            <h3>Ateliê em crescimento</h3>
-            <p>Os pedidos aumentaram e a divulgação precisa acompanhar. Uma vitrine MaruPages mostra o seu trabalho com o cuidado que ele merece.</p>
-          </article>
-          <article class="perfil" data-surge style="--d:.2s">
-            <span class="perfil__emoji" aria-hidden="true">🍩</span>
-            <h3>Doceria estabelecida</h3>
-            <p>Loja, equipe, muitos produtos. Com as duas soluções você atrai clientes e mantém custos, estoque e caixa sob controle.</p>
-          </article>
-        </div>
-        <p class="futuro" data-surge>Começamos pela confeitaria porque conhecemos esse mundo de perto. <span>E vamos crescer junto com quem empreende.</span></p>
-      </div>
-    </section>
-
-    <!-- VALORES -->
-    <section class="secao valores">
-      <div class="wrap valores__grid">
-        <div class="valor" data-surge><b>Feito para confeitaria</b><p>Nada de sistema genérico. Cada tela pensa em receitas, encomendas e datas de entrega.</p></div>
-        <div class="valor" data-surge style="--d:.08s"><b>Simples de usar</b><p>Se você usa WhatsApp e Instagram, consegue usar a Maruvas.</p></div>
-        <div class="valor" data-surge style="--d:.16s"><b>Atendimento de gente</b><p>Fale com uma pessoa de verdade, que entende o seu negócio.</p></div>
-        <div class="valor" data-surge style="--d:.24s"><b>Funciona no celular</b><p>Use na cozinha, no ponto de entrega ou no sofá, de onde estiver.</p></div>
       </div>
     </section>
 
     <!-- DÚVIDAS -->
     <section class="secao duvidas" id="duvidas">
       <div class="wrap duvidas__grid">
-        <div class="cabeca cabeca--esq">
-          <p class="rotulo" data-surge>Dúvidas</p>
-          <h2 data-surge style="--d:.06s">Perguntas <em>frequentes</em></h2>
-          <p class="cabeca__sub" data-surge style="--d:.12s">Não achou o que procurava? Chama a gente no WhatsApp.</p>
+        <div>
+          <p class="mv-sobre" data-surge>Dúvidas</p>
+          <h2 class="mv-h1" data-surge style="--d:.06s">Perguntas <span class="mv-enfase">frequentes</span></h2>
         </div>
         <div class="faq">
           <details data-surge>
             <summary>O que é a Maruvas?</summary>
-            <p>A Maruvas é a marca que reúne as nossas soluções digitais para confeiteiras e doceiras. Hoje são duas: o Marudesk, para a gestão do negócio, e a MaruPages, para a sua vitrine na internet.</p>
+            <p>É a marca que reúne nossas soluções para confeiteiras e doceiras: a MaruPages, para a sua vitrine na internet, e o Marudesk, para a gestão do negócio.</p>
           </details>
           <details data-surge style="--d:.05s">
-            <summary>Preciso contratar as duas soluções?</summary>
-            <p>Não. Cada uma funciona sozinha. Você pode começar pela que resolve o seu maior problema hoje e somar a outra quando fizer sentido.</p>
+            <summary>Preciso contratar os dois?</summary>
+            <p>Não. Cada um funciona sozinho. Comece pelo que resolve o seu maior problema hoje e some o outro quando fizer sentido.</p>
           </details>
           <details data-surge style="--d:.1s">
             <summary>Preciso entender de tecnologia?</summary>
-            <p>Não. Tudo foi pensado para ser simples, e a gente acompanha você nos primeiros passos.</p>
-          </details>
-          <details data-surge style="--d:.15s">
-            <summary>Funciona no celular?</summary>
-            <p>Sim. As vitrines MaruPages são feitas primeiro para o celular, e o Marudesk pode ser usado no navegador do celular ou do computador.</p>
-          </details>
-          <details data-surge style="--d:.2s">
-            <summary>Como faço para começar?</summary>
-            <p>Escolha a solução abaixo e conheça os detalhes, ou fale com a gente no WhatsApp para entender o que é melhor para o seu momento.</p>
+            <p>Não. Tudo foi pensado para quem usa WhatsApp e Instagram, e a gente acompanha você nos primeiros passos.</p>
           </details>
         </div>
       </div>
@@ -378,27 +231,27 @@
       <div class="wrap">
         <div class="final__caixa" data-surge>
           <span class="final__aro" aria-hidden="true"></span>
-          <h2>Seu talento merece um <em>negócio à altura.</em></h2>
-          <p>Escolha por onde começar.</p>
+          <h2 class="mv-h1">Seu talento merece um <span class="mv-enfase">negócio à altura.</span></h2>
           <div class="final__acoes">
-            <a href="https://marudesk.com.br" class="btn btn--branco mag" target="_blank" rel="noopener">Marudesk <span class="seta">↗</span></a>
-            <a href="https://landing-pages-exemplos.nicolasnoronhas.workers.dev/" class="btn btn--vidro mag" target="_blank" rel="noopener">MaruPages <span class="seta">↗</span></a>
+            <a href="https://landing-pages-exemplos.nicolasnoronhas.workers.dev/" class="mv-btn btn-branco mag" target="_blank" rel="noopener"><img src="img/logos/marupages-simbolo.svg" alt="" width="24" height="24">MaruPages</a>
+            <a href="https://marudesk.com.br" class="mv-btn btn-branco mag" target="_blank" rel="noopener"><img src="img/logos/marudesk-simbolo.svg" alt="" width="24" height="24">Marudesk</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="rodape">
+  <footer class="rodape" data-tema="escuro">
     <div class="wrap rodape__grid">
       <div>
-        <a href="#inicio" class="marca marca--rodape"><img src="img/maruvas.svg" alt="" width="32" height="32"><span>Maruvas</span></a>
+        <img src="img/logos/maruvas-logo-escuro.svg" alt="Maruvas" width="132" height="32">
         <p>Tecnologia para confeiteiras que empreendem.</p>
       </div>
       <div>
         <h4>Soluções</h4>
-        <a href="https://marudesk.com.br" target="_blank" rel="noopener">Marudesk</a>
         <a href="https://landing-pages-exemplos.nicolasnoronhas.workers.dev/" target="_blank" rel="noopener">MaruPages</a>
+        <a href="https://marudesk.com.br" target="_blank" rel="noopener">Marudesk</a>
+        <span class="rodape__breve">Marudelivre (em breve)</span>
       </div>
       <div>
         <h4>Contato</h4>
@@ -406,7 +259,7 @@
       </div>
     </div>
     <div class="wrap rodape__base">
-      <small>© <span id="ano">2026</span> Maruvas. Todos os direitos reservados.</small>
+      <small>© <span id="ano">2026</span> Maruvas</small>
       <a href="#inicio" class="subir" aria-label="Voltar ao topo">↑</a>
     </div>
   </footer>

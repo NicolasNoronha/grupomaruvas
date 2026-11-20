@@ -1,0 +1,199 @@
+/* =====================================================================
+   Maruvas · identidade visual compartilhada do ecossistema  (v1, nov/2026)
+   Vale para: Maruvas (marca-mãe), MaruPages, Marudesk, Marudelivre e os
+   próximos produtos "Maru-".
+
+   Fontes (coloque no <head> antes deste arquivo):
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
+
+   Produto: no <html> ou <body> use data-produto="pages|desk|delivre"
+   para trocar o acento. Sem atributo = Maruvas.
+   Tema escuro: data-tema="escuro" em qualquer seção.
+   Tudo tem prefixo mv- para não brigar com o CSS que já existe.
+   ===================================================================== */
+
+:root {
+  /* ---------- Fontes ---------- */
+  --mv-fonte: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mv-fonte-enfase: "Fraunces", Georgia, serif;   /* só itálico, só 1 a 3 palavras de destaque em títulos de marketing */
+
+  /* ---------- Escala tipográfica (base 16, razão 1,25) ---------- */
+  --mv-t-legenda: .75rem;     /* 12  rótulos, sobretítulos em caixa alta */
+  --mv-t-pequeno: .875rem;    /* 14  textos de apoio, tabelas, chips */
+  --mv-t-corpo:   1rem;       /* 16  corpo no sistema */
+  --mv-t-corpo-g: 1.125rem;   /* 18  corpo nos sites de marketing */
+  --mv-t-h4:      1.25rem;    /* 20  título de cartão */
+  --mv-t-h3:      1.5rem;     /* 24  */
+  --mv-t-h2:      clamp(1.75rem, 1.2rem + 2.2vw, 2.5rem);   /* 28 → 40 */
+  --mv-t-h1:      clamp(2.25rem, 1.4rem + 3.6vw, 3.5rem);   /* 36 → 56 */
+  --mv-t-display: clamp(2.75rem, 1.5rem + 5.4vw, 4.5rem);   /* 44 → 72  só no hero */
+  --mv-t-numero:  clamp(1.5rem, 1.2rem + 1.2vw, 2rem);      /* valores R$ em painéis */
+
+  --mv-peso-corpo: 400;
+  --mv-peso-medio: 600;   /* rótulos, menus */
+  --mv-peso-forte: 700;   /* botões, números */
+  --mv-peso-titulo: 800;  /* títulos e logotipo */
+
+  --mv-entrelinha-titulo: 1.08;
+  --mv-entrelinha-corpo: 1.6;
+  --mv-tracking-titulo: -.03em;
+  --mv-tracking-rotulo: .12em;
+
+  /* ---------- Cor: marca-mãe ---------- */
+  --mv-rosa: #D65B91;          /* cor base Maruvas */
+  --mv-rosa-claro: #E97AAA;
+  --mv-rosa-escuro: #A93C74;   /* hover e texto rosa sobre branco (contraste AA) */
+  --mv-rosa-50: #FDEFF5;
+  --mv-rosa-100: #F8D9E7;
+
+  /* ---------- Cor: produtos (sempre em degradê saindo do rosa) ---------- */
+  --mv-pages: #FF7A45;   --mv-pages-texto: #C9471B;
+  --mv-desk: #8A3FA3;    --mv-desk-texto: #7A3192;
+  --mv-delivre: #3C74D8; --mv-delivre-texto: #2C5DB8;
+
+  --mv-grad-maruvas: linear-gradient(135deg, #E97AAA, #D65B91 55%, #A93C74);
+  --mv-grad-pages:   linear-gradient(135deg, #D65B91, #F0665F 55%, #FF7A45);
+  --mv-grad-desk:    linear-gradient(135deg, #D65B91, #B24C9C 55%, #8A3FA3);
+  --mv-grad-delivre: linear-gradient(135deg, #D65B91, #8E62B8 55%, #3C74D8);
+  --mv-grad-ecossistema: linear-gradient(90deg, #FF7A45, #D65B91 50%, #8A3FA3);
+
+  /* ---------- Neutros (ameixa quente, nunca cinza puro) ---------- */
+  --mv-tinta: #2A1622;     /* texto principal */
+  --mv-tinta-2: #5E4654;   /* texto secundário */
+  --mv-tinta-3: #8C7482;   /* legendas, placeholders */
+  --mv-borda: #EDE3E8;
+  --mv-creme: #FFF8F4;     /* fundo dos sites de marketing */
+  --mv-nevoa: #F8F3F6;     /* fundo do sistema (atrás dos cartões) */
+  --mv-branco: #FFFFFF;
+  --mv-ameixa: #1A0B15;    /* fundo escuro */
+  --mv-ameixa-2: #2B0F22;  /* superfícies no escuro */
+  --mv-ameixa-3: #3F1832;  /* bordas no escuro */
+  --mv-moldura: #1E0E18;   /* moldura do celular */
+
+  /* ---------- Cor: estados (iguais em todos os produtos) ---------- */
+  --mv-ok: #1F9D6B;     --mv-ok-fundo: #E3F5EC;
+  --mv-alerta: #D9721A; --mv-alerta-fundo: #FDF0E2;
+  --mv-erro: #D63A4A;   --mv-erro-fundo: #FCE6E8;
+  --mv-info: #3C74D8;   --mv-info-fundo: #E6EEFB;
+  --mv-whatsapp: #1FA855;
+
+  /* ---------- Forma ---------- */
+  --mv-raio-p: 10px;    /* campos, chips quadrados */
+  --mv-raio-m: 16px;    /* cartões do sistema */
+  --mv-raio-g: 24px;    /* cartões de marketing, mockups */
+  --mv-raio-pilula: 999px;  /* botões e chips */
+
+  /* ---------- Espaço (base 4) ---------- */
+  --mv-e-1: 4px;  --mv-e-2: 8px;  --mv-e-3: 12px; --mv-e-4: 16px;
+  --mv-e-5: 24px; --mv-e-6: 32px; --mv-e-7: 48px; --mv-e-8: 64px; --mv-e-9: 96px;
+  --mv-secao: clamp(72px, 10vw, 128px);
+  --mv-largura: 1180px;
+
+  /* ---------- Sombra e movimento ---------- */
+  --mv-sombra: 0 1px 2px rgba(42,22,34,.05), 0 12px 32px -12px rgba(120,30,80,.22);
+  --mv-sombra-forte: 0 30px 60px -20px rgba(120,30,80,.38);
+  --mv-ease: cubic-bezier(.2,.8,.2,1);
+
+  /* ---------- Acento ativo (troca por produto) ---------- */
+  --mv-acento: var(--mv-rosa);
+  --mv-acento-texto: var(--mv-rosa-escuro);
+  --mv-acento-grad: var(--mv-grad-maruvas);
+  --mv-acento-botao: var(--mv-rosa);   /* fundo do botão cheio (texto branco) */
+
+  /* ---------- Tema (claro por padrão) ---------- */
+  --mv-fundo: var(--mv-creme);
+  --mv-superficie: var(--mv-branco);
+  --mv-texto: var(--mv-tinta);
+  --mv-texto-2: var(--mv-tinta-2);
+  --mv-texto-3: var(--mv-tinta-3);
+  --mv-linha: var(--mv-borda);
+}
+
+[data-produto="pages"]   { --mv-acento-botao: #D9501F; --mv-acento: var(--mv-pages);   --mv-acento-texto: var(--mv-pages-texto);   --mv-acento-grad: var(--mv-grad-pages); }
+[data-produto="desk"]    { --mv-acento-botao: var(--mv-desk); --mv-acento: var(--mv-desk);    --mv-acento-texto: var(--mv-desk-texto);    --mv-acento-grad: var(--mv-grad-desk); }
+[data-produto="delivre"] { --mv-acento-botao: var(--mv-delivre); --mv-acento: var(--mv-delivre); --mv-acento-texto: var(--mv-delivre-texto); --mv-acento-grad: var(--mv-grad-delivre); }
+[data-sistema]           { --mv-fundo: var(--mv-nevoa); }  /* telas internas do produto */
+
+[data-tema="escuro"] {
+  --mv-fundo: var(--mv-ameixa);
+  --mv-superficie: var(--mv-ameixa-2);
+  --mv-texto: #FBF3F7;
+  --mv-texto-2: #D9C3CF;
+  --mv-texto-3: #A88C9B;
+  --mv-linha: var(--mv-ameixa-3);
+  --mv-acento-texto: #F3A6C8;
+  color-scheme: dark;
+}
+
+/* =====================================================================
+   Tipografia
+   ===================================================================== */
+.mv-base { font-family: var(--mv-fonte); font-size: var(--mv-t-corpo); line-height: var(--mv-entrelinha-corpo); color: var(--mv-texto); background: var(--mv-fundo); -webkit-font-smoothing: antialiased; }
+.mv-display, .mv-h1, .mv-h2, .mv-h3, .mv-h4 { font-family: var(--mv-fonte); font-weight: var(--mv-peso-titulo); line-height: var(--mv-entrelinha-titulo); letter-spacing: var(--mv-tracking-titulo); text-wrap: balance; margin: 0; }
+.mv-display { font-size: var(--mv-t-display); }
+.mv-h1 { font-size: var(--mv-t-h1); }
+.mv-h2 { font-size: var(--mv-t-h2); }
+.mv-h3 { font-size: var(--mv-t-h3); letter-spacing: -.02em; }
+.mv-h4 { font-size: var(--mv-t-h4); letter-spacing: -.01em; font-weight: var(--mv-peso-forte); }
+.mv-enfase { font-family: var(--mv-fonte-enfase); font-style: italic; font-weight: 500; letter-spacing: -.01em; color: var(--mv-acento-texto); }
+.mv-sobre { font-size: var(--mv-t-legenda); font-weight: var(--mv-peso-forte); letter-spacing: var(--mv-tracking-rotulo); text-transform: uppercase; color: var(--mv-acento-texto); }
+.mv-lead { font-size: var(--mv-t-corpo-g); color: var(--mv-texto-2); max-width: 60ch; }
+.mv-apoio { font-size: var(--mv-t-pequeno); color: var(--mv-texto-3); }
+.mv-numero { font-size: var(--mv-t-numero); font-weight: var(--mv-peso-titulo); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+
+/* =====================================================================
+   Botões e chips
+   ===================================================================== */
+.mv-btn { display: inline-flex; align-items: center; justify-content: center; gap: .5em; min-height: 48px; padding: 0 24px; border-radius: var(--mv-raio-pilula); border: 2px solid transparent; font: var(--mv-peso-forte) 1rem/1 var(--mv-fonte); text-decoration: none; cursor: pointer; white-space: nowrap; transition: background .2s, color .2s, box-shadow .3s, transform .3s var(--mv-ease); }
+.mv-btn:hover { transform: translateY(-1px); }
+.mv-btn--cheio { background: var(--mv-acento-botao); color: #fff; box-shadow: 0 10px 24px -12px var(--mv-acento-botao); }
+.mv-btn--cheio:hover { background: var(--mv-acento-texto); }
+.mv-btn--linha { border-color: currentColor; color: var(--mv-texto); background: transparent; }
+.mv-btn--whatsapp { background: var(--mv-whatsapp); color: #fff; }
+.mv-btn--p { min-height: 40px; padding: 0 16px; font-size: var(--mv-t-pequeno); }
+.mv-btn:focus-visible, .mv-chip:focus-visible { outline: 3px solid var(--mv-acento); outline-offset: 3px; }
+
+.mv-chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: var(--mv-raio-pilula); font-size: var(--mv-t-pequeno); font-weight: var(--mv-peso-medio); background: var(--mv-rosa-50); color: var(--mv-rosa-escuro); }
+[data-tema="escuro"] .mv-chip { background: rgba(255,255,255,.08); color: var(--mv-texto-2); }
+.mv-chip--ok { background: var(--mv-ok-fundo); color: var(--mv-ok); }
+.mv-chip--alerta { background: var(--mv-alerta-fundo); color: var(--mv-alerta); }
+.mv-chip--erro { background: var(--mv-erro-fundo); color: var(--mv-erro); }
+
+/* =====================================================================
+   Cartões
+   ===================================================================== */
+.mv-cartao { background: var(--mv-superficie); border: 1px solid var(--mv-linha); border-radius: var(--mv-raio-m); padding: var(--mv-e-5); box-shadow: var(--mv-sombra); }
+.mv-cartao--marketing { border-radius: var(--mv-raio-g); padding: clamp(24px, 4vw, 40px); }
+
+/* =====================================================================
+   Logo em HTML (quando não der para usar o SVG completo)
+   <a class="mv-marca" href="/"><img src="logos/marudesk-simbolo.svg" alt=""><span>maru<b>desk</b></span></a>
+   ===================================================================== */
+.mv-marca { display: inline-flex; align-items: center; gap: .5em; font: var(--mv-peso-titulo) 1.5rem/1 var(--mv-fonte); letter-spacing: -.035em; color: var(--mv-texto); text-decoration: none; }
+.mv-marca img { width: 1.4em; height: 1.4em; }
+.mv-marca b { font-weight: inherit; background: var(--mv-acento-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.mv-endosso { font-size: var(--mv-t-legenda); font-weight: var(--mv-peso-medio); color: var(--mv-texto-3); letter-spacing: .02em; }
+.mv-endosso strong { color: var(--mv-texto-2); }
+
+/* =====================================================================
+   Moldura de celular padrão (sempre com print REAL dentro)
+   <figure class="mv-celular"><img src="telas/marudesk-inicio.png" alt="Tela inicial do Marudesk no celular"></figure>
+   Print: viewport 390×844, escala 2 (arquivo 780×1688), conta de demonstração.
+   Tamanho: --mv-cel-largura (padrão 280px).
+   ===================================================================== */
+.mv-celular { --mv-cel-largura: 280px; position: relative; width: var(--mv-cel-largura); max-width: 100%; aspect-ratio: 390 / 844; margin: 0; padding: calc(var(--mv-cel-largura) * .035); border-radius: calc(var(--mv-cel-largura) * .16); background: var(--mv-moldura); box-shadow: var(--mv-sombra-forte), inset 0 0 0 2px #3A2431; box-sizing: content-box; }
+.mv-celular::before { content: ""; position: absolute; z-index: 2; top: calc(var(--mv-cel-largura) * .065); left: 50%; width: 30%; height: calc(var(--mv-cel-largura) * .085); transform: translateX(-50%); border-radius: 999px; background: var(--mv-moldura); }
+.mv-celular > img, .mv-celular > iframe, .mv-celular > video { display: block; box-sizing: border-box; width: 100%; height: 100%; object-fit: cover; object-position: top; border: 0; border-radius: calc(var(--mv-cel-largura) * .125); padding-top: calc(var(--mv-cel-largura) * .12); background: var(--mv-cel-barra, #fff); }
+/* --mv-cel-barra: cor da faixa de status acima do print; use a cor do topo da tela (ex.: style="--mv-cel-barra:#E8557E") */
+.mv-celular--p { --mv-cel-largura: 200px; }
+.mv-celular--g { --mv-cel-largura: 320px; }
+
+/* Janela de navegador padrão para prints de computador (1440×900) */
+.mv-janela { margin: 0; border-radius: 14px; overflow: hidden; background: var(--mv-superficie); border: 1px solid var(--mv-linha); box-shadow: var(--mv-sombra-forte); }
+.mv-janela::before { content: ""; display: block; height: 34px; background-color: var(--mv-nevoa); background-image: radial-gradient(circle at 18px 17px, #FF6159 5px, transparent 5.5px), radial-gradient(circle at 36px 17px, #FFBD2E 5px, transparent 5.5px), radial-gradient(circle at 54px 17px, #28C840 5px, transparent 5.5px); border-bottom: 1px solid var(--mv-linha); }
+[data-tema="escuro"] .mv-janela::before { background-color: var(--mv-ameixa-3); }
+.mv-janela > img { display: block; width: 100%; height: auto; }
+
+@media (prefers-reduced-motion: reduce) { .mv-btn { transition: none; } .mv-btn:hover { transform: none; } }
